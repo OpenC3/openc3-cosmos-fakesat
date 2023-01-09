@@ -15,9 +15,10 @@ spec = Gem::Specification.new do |s|
 
   time = Time.now.strftime("%Y%m%d%H%M%S")
   if ENV['VERSION']
-    s.version = ENV['VERSION'].dup + ".#{time}"
+    s.version = ENV['VERSION'].dup
   else
+    time = Time.now.strftime("%Y%m%d%H%M%S")
     s.version = '0.0.0' + ".#{time}"
   end
-  s.files = Dir.glob("{targets,lib,tools,microservices}/**/*") + %w(Rakefile README.md plugin.txt)
+  s.files = Dir.glob("{targets,lib,tools,microservices}/**/*") + %w(Rakefile LICENSE.txt README.md plugin.txt)
 end
