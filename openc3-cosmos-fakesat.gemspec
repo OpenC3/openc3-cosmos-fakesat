@@ -2,7 +2,7 @@
 
 # Create the overall gemspec
 spec = Gem::Specification.new do |s|
-  s.name = 'cosmos-fakesat'
+  s.name = 'openc3-cosmos-fakesat'
   s.summary = 'OpenC3 cosmos-fakesat plugin'
   s.description = <<-EOF
     cosmos-fakesat plugin facilitating COSMOS user training
