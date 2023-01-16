@@ -255,7 +255,7 @@ module OpenC3
           reject_cmd("Invalid Solar Array Number: #{num}")
         end
 
-      when 'SLRPNLRESET'
+      when 'SLRPNLSTOW'
         num = packet.read('NUM')
         case num
         when 1
@@ -376,10 +376,6 @@ module OpenC3
         else
           reject_cmd("Invalid ADCS Control: #{state}")
         end
-
-      when 'IMAGER_STATE'
-
-
       end
     end
 
@@ -501,8 +497,8 @@ module OpenC3
           if @heater1_state == 'ON'
             @heater1_pwr = 300
             @temp1 += 0.5
-            if @temp1 > 100.0
-              @temp1 = 100.0
+            if @temp1 > 50.0
+              @temp1 = 50.0
             end
           else
             @heater1_pwr = 0
