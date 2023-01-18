@@ -1,5 +1,9 @@
-COMMAND <%= target_name %> COLLECT BIG_ENDIAN "Starts a collect on the <%= target_name %> target"
+COMMAND <%= target_name %> NOOP BIG_ENDIAN "NOOP"
   <%= render "_ccsds_cmd.txt", locals: {id: 1} %>
+  APPEND_PARAMETER IGNORE 8 UINT MIN MAX 0 "Ignored item"
+
+COMMAND <%= target_name %> COLLECT BIG_ENDIAN "Starts a collect on the <%= target_name %> target"
+  <%= render "_ccsds_cmd.txt", locals: {id: 2} %>
   PARAMETER    TYPE           64  16  UINT MIN MAX 0 "Collect type"
     REQUIRED
     STATE NORMAL  0
@@ -12,10 +16,12 @@ COMMAND <%= target_name %> COLLECT BIG_ENDIAN "Starts a collect on the <%= targe
 
 COMMAND <%= target_name %> ABORT BIG_ENDIAN "Aborts a collect on the <%= target_name %> instrument"
   <%= render "_ccsds_cmd.txt", locals: {id: 2} %>
+  APPEND_PARAMETER IGNORE 8 UINT MIN MAX 0 "Ignored item"
 
 COMMAND <%= target_name %> CLEAR BIG_ENDIAN "Clears counters on the <%= target_name %> instrument"
   HAZARDOUS "Clearing counters may lose valuable information."
   <%= render "_ccsds_cmd.txt", locals: {id: 3} %>
+  APPEND_PARAMETER IGNORE 8 UINT MIN MAX 0 "Ignored item"
 
 COMMAND <%= target_name %> SET_MODE BIG_ENDIAN "Change spacecraft mode"
   <%= render "_ccsds_cmd.txt", locals: {id: 4} %>
