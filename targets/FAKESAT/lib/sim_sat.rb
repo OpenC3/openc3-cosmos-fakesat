@@ -19,7 +19,7 @@ require 'openc3'
 
 module OpenC3
   MAX_PWR_WATT_SECONDS = 100000
-  INIT_PWR_WATT_SECONDS = 25000
+  INIT_PWR_WATT_SECONDS = 60000
   HYSTERESIS = 2.0
 
   # Simulated satellite for the training. Populates several packets and cycles
