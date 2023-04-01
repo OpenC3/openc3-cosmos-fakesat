@@ -29,13 +29,13 @@ end
 
 class ModeGroup < OpenC3::Group
   def script_safe
-    FakeSat.safe
+    FakeSat.new.safe
   end
   def script_checkout
-    FakeSat.checkout
+    FakeSat.new.checkout
   end
   def script_operate
-    FakeSat.operate
+    FakeSat.new.operate
   end
 end
 
