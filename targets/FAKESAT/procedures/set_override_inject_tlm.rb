@@ -1,7 +1,18 @@
+set_line_delay(1)
+screen_def = '
+  SCREEN AUTO AUTO 0.1 FIXED
+  VERTICAL
+    VERTICALBOX
+      LABELVALUE FAKESAT HEALTH_STATUS MODE
+    END
+  END
+'
+# Here we pass in the screen definition as a string
+local_screen("TESTING", screen_def)
+prompt("Watch the screen for mode changes ...")
+
 cmd("FAKESAT SET_MODE with MODE SAFE")
 wait_check("FAKESAT HEALTH_STATUS MODE == 'SAFE'", 5)
-
-prompt("Ensure Packet Viewer is open to INST HEALTH_STATUS and watch MODE")
 
 # Call set_tlm twice to ensure it gets processed as real tlm flows
 set_tlm("FAKESAT HEALTH_STATUS MODE = 'OPERATE'")
