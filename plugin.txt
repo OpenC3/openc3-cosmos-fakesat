@@ -1,5 +1,5 @@
 # Set VARIABLEs here to allow variation in your plugin
-# See https://openc3.com/docs/v5/plugins for more information
+# See https://docs.openc3.com/docs/configuration/plugins for more information
 VARIABLE fakesat_target_name FAKESAT
 VARIABLE fakesat_int_name FAKESAT_INT
 
