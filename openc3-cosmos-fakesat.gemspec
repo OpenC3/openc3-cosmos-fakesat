@@ -20,5 +20,12 @@ spec = Gem::Specification.new do |s|
     time = Time.now.strftime("%Y%m%d%H%M%S")
     s.version = '0.0.0' + ".#{time}"
   end
-  s.files = Dir.glob("{targets,lib,tools,microservices}/**/*") + %w(Rakefile LICENSE.txt README.md plugin.txt)
+  s.files = Dir.glob("{targets,lib,public,tools,microservices}/**/*") + %w(Rakefile LICENSE.txt README.md plugin.txt)
+
+  s.metadata = {
+    "source_code_uri" => "https://github.com/OpenC3/openc3-cosmos-fakesat",
+    "openc3_store_title" => "Fakesat",
+    "openc3_store_description" => "cosmos-fakesat plugin facilitating COSMOS user training",
+    "openc3_store_keywords" => "training",
+  }
 end
