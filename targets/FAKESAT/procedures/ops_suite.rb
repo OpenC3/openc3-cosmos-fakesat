@@ -1,3 +1,13 @@
+# encoding: ascii-8bit
+
+# Copyright 2026 OpenC3, Inc.
+# All Rights Reserved.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See LICENSE.md for more details.
+
 require 'openc3/script/suite.rb'
 load_utility 'FAKESAT/lib/fake_sat.rb'
 
@@ -46,6 +56,8 @@ class OpsSuite < OpenC3::Suite
   def initialize
     super()
     add_group('CollectGroup')
-    add_group('ModeGroup')
+    add_script('ModeGroup', 'script_safe')
+    add_script('ModeGroup', 'script_checkout')
+    add_script('ModeGroup', 'script_operate')
   end
 end

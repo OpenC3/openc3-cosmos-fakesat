@@ -1,3 +1,11 @@
+# Copyright 2026 OpenC3, Inc.
+# All Rights Reserved.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See LICENSE.md for more details.
+
 TELEMETRY <%= target_name %> HEALTH_STATUS BIG_ENDIAN "Health and status from the <%= target_name %> target"
   <%= render "_ccsds_tlm.txt", locals: {apid: 1} %>
   APPEND_ITEM CMD_ACPT_CNT 32 UINT "Command accept counter"

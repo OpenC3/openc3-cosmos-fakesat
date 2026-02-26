@@ -1,3 +1,11 @@
+# Copyright 2026 OpenC3, Inc.
+# All Rights Reserved.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See LICENSE.md for more details.
+
 from openc3.script.suite import Suite, Group
 
 load_utility("FAKESAT/lib/fake_sat.py")
@@ -48,4 +56,6 @@ class ModeGroup(Group):
 class OpsSuite(Suite):
     def __init__(self):
         self.add_group(CollectGroup)
-        self.add_group(ModeGroup)
+        self.add_script(ModeGroup, "script_safe")
+        self.add_script(ModeGroup, "script_checkout")
+        self.add_script(ModeGroup, "script_operate")
