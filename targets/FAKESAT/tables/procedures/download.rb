@@ -1,3 +1,13 @@
+# encoding: ascii-8bit
+
+# Copyright 2026 OpenC3, Inc.
+# All Rights Reserved.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See LICENSE.md for more details.
+
 # TBL_FILENAME is set to the name of the table file to overwrite
 puts "file:#{ENV['TBL_FILENAME']}"
 # Download the file

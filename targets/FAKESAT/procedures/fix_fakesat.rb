@@ -1,3 +1,13 @@
+# encoding: ascii-8bit
+
+# Copyright 2026 OpenC3, Inc.
+# All Rights Reserved.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See LICENSE.md for more details.
+
 cmd("FAKESAT SLRPNLDEPLOY with NUM 1")
 wait_check("FAKESAT MECH SLRPNL1_STATE == 'DEPLOYED'", 5)
 cmd("FAKESAT SLRPNLDEPLOY with NUM 2")

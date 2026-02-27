@@ -1,3 +1,11 @@
+# Copyright 2026 OpenC3, Inc.
+# All Rights Reserved.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See LICENSE.md for more details.
+
 TABLE "PPS_Selection" BIG_ENDIAN KEY_VALUE "Payload Clock Control Pulse Per Second Selection Table"
   APPEND_PARAMETER "Primary_PPS" 8 UINT 0 1 1
     STATE CHECKED 1

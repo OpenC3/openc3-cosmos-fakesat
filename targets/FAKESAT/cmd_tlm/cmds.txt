@@ -1,3 +1,11 @@
+# Copyright 2026 OpenC3, Inc.
+# All Rights Reserved.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See LICENSE.md for more details.
+
 COMMAND <%= target_name %> NOOP BIG_ENDIAN "NOOP"
   <%= render "_ccsds_cmd.txt", locals: {apid: 1} %>
   APPEND_PARAMETER IGNORE 8 UINT MIN MAX 0 "Ignored item"
